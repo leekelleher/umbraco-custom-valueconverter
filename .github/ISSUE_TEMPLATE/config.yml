@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Features and ideas
+    url: https://github.com/leekelleher/umbraco-custom-valueconverter/discussions/new?category=ideas
+    about: Suggest an idea for this project
+  - name: Umbraco Community forum
+    url: https://our.umbraco.com/packages/backoffice-extensions/custom-valueconverter/custom-valueconverter-feedback/
+    about: "For community (free) support questions, please use the Umbraco Community forum."
+  - name: "Commericial support"
+    url: https://leekelleher.com/contact/
+    about: "For commerical (paid) support questions, please contact me directly."

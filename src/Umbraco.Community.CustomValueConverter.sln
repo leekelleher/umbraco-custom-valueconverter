@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco.Community.CustomValueConverter", "Umbraco.Community.CustomValueConverter.csproj", "{A6B5D511-34CC-4BA1-9383-92A0C3AAD5E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco.Community.Polyfill", "..\..\umbraco-polyfill\src\Umbraco.Community.Polyfill.csproj", "{D140F570-130E-463B-877E-26590DACD3B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6B5D511-34CC-4BA1-9383-92A0C3AAD5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B5D511-34CC-4BA1-9383-92A0C3AAD5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B5D511-34CC-4BA1-9383-92A0C3AAD5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B5D511-34CC-4BA1-9383-92A0C3AAD5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D140F570-130E-463B-877E-26590DACD3B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D140F570-130E-463B-877E-26590DACD3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D140F570-130E-463B-877E-26590DACD3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D140F570-130E-463B-877E-26590DACD3B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4614BC6-4D23-47C9-AFB5-5D984660B901}
+	EndGlobalSection
+EndGlobal

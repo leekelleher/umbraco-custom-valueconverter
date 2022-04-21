@@ -1,0 +1,31 @@
+﻿<!-- Copyright © 2019 Lee Kelleher.
+   - This Source Code has been derived from Contentment.
+   - https://github.com/leekelleher/umbraco-contentment/blob/3.2.0/src/Umbraco.Community.Contentment/Web/UI/App_Plugins/Contentment/components/list-editor.html
+   - Modified under the permissions of the Mozilla Public License.
+   - Copyright © 2022 Lee Kelleher.
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+<div class="umb-contentpicker" ng-controller="Umbraco.Community.CustomValueConverter.ItemPicker.Controller as vm">
+    <div ui-sortable="vm.sortableOptions" ng-model="vm.items">
+        <umb-node-preview ng-repeat="item in vm.items"
+                          
+                          name="vm.populate(item, $index, 'name')"
+                          description="vm.populate(item, $index, 'description')"
+                          sortable="vm.allowSort"
+                          allow-edit="vm.allowEdit"
+                          allow-remove="vm.allowRemove"
+                          on-remove="vm.remove($index)">
+        </umb-node-preview>
+    </div>
+    <button type="button"
+            class="umb-node-preview-add"
+            id="{{model.alias}}"
+            aria-label="{{vm.addButtonLabel}}"
+            ng-click="vm.add()"
+            ng-if="vm.allowAdd">
+        <span ng-bind="vm.addButtonLabel"></span>
+        <span class="sr-only">...</span>
+    </button>
+</div>

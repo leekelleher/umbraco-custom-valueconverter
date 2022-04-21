@@ -1,0 +1,74 @@
+﻿<!-- Copyright © 2019 Lee Kelleher.
+   - This Source Code has been derived from Contentment.
+   - https://github.com/leekelleher/umbraco-contentment/blob/3.2.0/src/Umbraco.Community.Contentment/DataEditors/ItemPicker/item-picker.overlay.html
+   - Modified under the permissions of the Mozilla Public License.
+   - Copyright © 2022 Lee Kelleher.
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+<div ng-controller="Umbraco.Community.CustomValueConverter.ItemPickerOverlay.Controller as vm">
+    <umb-editor-view>
+
+        <umb-editor-header name="vm.title"
+                           name-locked="true"
+                           hide-alias="true"
+                           hide-icon="true"
+                           hide-description="true">
+        </umb-editor-header>
+
+        <umb-editor-container>
+
+            <umb-box ng-if="vm.items.length > 0">
+                <umb-box-content>
+
+                    <div class="umb-search-filter w-100 mb3" ng-if="vm.enableFilter">
+                        <label for="icon-search" class="sr-only">Type to filter...</label>
+                        <umb-icon icon="icon-search"></umb-icon>
+                        <input id="icon-search"
+                               type="text"
+                               ng-model="vm.searchTerm"
+                               class="umb-search-filter__input"
+                               localize="placeholder"
+                               placeholder="@placeholders_filter"
+                               umb-auto-focus
+                               no-dirty-check />
+                    </div>
+
+                    <ul class="umb-actions umb-actions-child">
+                        <li class="umb-action" ng-repeat="item in vm.items | orderBy:vm.orderBy | filter:vm.searchTerm as results">
+                            <button type="button" class="umb-action-link umb-outline btn-reset" ng-click="vm.select(item)">
+                                <umb-icon icon="{{item.icon || vm.defaultIcon}}" class="large icon"></umb-icon>
+                                <span class="menu-label">
+                                    <span ng-bind="item.name"></span>
+                                    <small ng-bind="item.description"></small>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="alert alert-danger" ng-if="results.length == 0">
+                            <span>No items found for '<em ng-bind="vm.searchTerm"></em>'.</span>
+                        </li>
+                    </ul>
+
+                </umb-box-content>
+            </umb-box>
+
+            <umb-empty-state ng-if="vm.items.length == 0" position="center">
+                <p>There are no items available to add.</p>
+            </umb-empty-state>
+
+        </umb-editor-container>
+
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+                <umb-button type="button"
+                            button-style="link"
+                            label-key="general_close"
+                            shortcut="esc"
+                            action="vm.close()">
+                </umb-button>
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+
+    </umb-editor-view>
+</div>
