@@ -18,6 +18,10 @@
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
     <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
         <PackageReference Include="UmbracoCms.Web" Version="8.17.0" />
         <PackageReference Include="Our.Umbraco.Community.Polyfill" Version="1.*" />
