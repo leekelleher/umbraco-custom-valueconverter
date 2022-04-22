@@ -20,6 +20,7 @@
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
         <PackageReference Include="UmbracoCms.Web" Version="8.17.0" />
+        <PackageReference Include="Our.Umbraco.Community.Polyfill" Version="1.*" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
@@ -42,10 +43,6 @@
             <Pack>True</Pack>
             <PackagePath>buildTransitive</PackagePath>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\umbraco-polyfill\src\Umbraco.Community.Polyfill.csproj" />
     </ItemGroup>
 
 </Project>
