@@ -3,4 +3,9 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 
-<div class="umb-readonlyvalue" ng-bind-html="model.config.notes | safe_html"></div>
+<div class="umb-readonlyvalue">
+    <details class="well well-small">
+        <summary><strong ng-bind="model.config.heading"></strong></summary>
+        <div ng-bind-html="model.config.message | safe_html"></div>
+    </details>
+</div>
