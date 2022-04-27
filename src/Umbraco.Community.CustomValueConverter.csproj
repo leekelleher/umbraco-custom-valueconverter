@@ -12,6 +12,8 @@
         <Company>Package Factory</Company>
         <Authors>Lee Kelleher</Authors>
         <Copyright>2022 © Lee Kelleher</Copyright>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/leekelleher/umbraco-custom-valueconverter</PackageProjectUrl>
         <RepositoryUrl>https://github.com/leekelleher/umbraco-custom-valueconverter</RepositoryUrl>
@@ -43,10 +45,9 @@
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
             <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>
-        <None Include="build\**\*.*">
-            <Pack>True</Pack>
-            <PackagePath>buildTransitive</PackagePath>
-        </None>
+        <None Include="build\*.targets" Pack="true" PackagePath="buildTransitive" />
+        <None Include="..\docs\assets\img\logo.png" Pack="true" PackagePath="\icon.png" />
+        <None Include="..\.github\NUGET_README.md" Pack="true" PackagePath="\README.md" />
     </ItemGroup>
 
 </Project>
