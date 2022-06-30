@@ -55,7 +55,7 @@ namespace Umbraco.Community.CustomValueConverter
                 {
                     { "heading", "A note about changing the default value converter." },
                     { "message", @"<p>Some of Umbraco's built-in value converters are designed to work explicitly with their associated property editor and data type configuration.</p>
-<p>This means they may not be hot-swappable. For example, the <code>MediaPicker</code> and <code>MultiNodeTreePicker</code> value converters will try to detect if the data type is configured for single or multiple use. So if you wanted to change the value converter for a textstring editor, then the target value converter would not be aware of the intended configuration, and potentially cause an error.</p>
+<p>This means they may not be hot-swappable. For example, the <code>MediaPicker</code> and <code>MultiNodeTreePicker</code> value converters will try to detect if the data type is configured for single or multiple use. So if you wanted to change the value converter for a textstring editor to use <code>MultiNodeTreePicker</code>'s converter, then it would cause an error, as it would not be aware of the intended configuration.</p>
 <p>For primitive values, e.g. integer, decimal, string, boolean. These should work as expected.</p>
 <p>If you are using you own custom value converter code, then you don't need to be concerned with this note, you will have full control over the value conversion.</p>" },
                 },
