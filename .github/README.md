@@ -1,4 +1,4 @@
-<img src="../assets/img/logo.png" alt="Custom Value Converter for Umbraco logo" height="130" align="right">
+<img src="../docs/assets/img/logo.png" alt="Custom Value Converter for Umbraco logo" height="130" align="right">
 
 ## Custom Value Converter for Umbraco
 
