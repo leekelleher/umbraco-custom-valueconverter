@@ -1,5 +1,5 @@
 ﻿{
     "name": "Custom ValueConverter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "javascript": [ "~/App_Plugins/CustomValueConverter/item-picker.js" ]
 }

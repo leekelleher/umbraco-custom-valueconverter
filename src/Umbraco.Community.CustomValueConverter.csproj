@@ -8,7 +8,7 @@
         <Title>Custom Value Converter for Umbraco</Title>
         <Description>Custom Value Converter property-editor wrapper for Umbraco</Description>
         <PackageTags>umbraco plugin package</PackageTags>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Company>Package Factory</Company>
         <Authors>Lee Kelleher</Authors>
         <Copyright>2022 © Lee Kelleher</Copyright>
