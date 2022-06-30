@@ -84,17 +84,15 @@ namespace Umbraco.Community.CustomValueConverter
 
         public IDataValueEditor GetValueEditor()
         {
-#if NET472
-            return new DataValueEditor
-#else
-            return new DataValueEditor(
+            return new CustomValueConverterDataValueEditor(
+                _dataTypeService,
+                _propertyEditors,
                 _localizedTextService,
                 _shortStringHelper,
                 _jsonSerializer)
-#endif
             {
                 ValueType = ValueTypes.Json,
-                View = DataEditorViewPath,
+                View = DataEditorViewPath
             };
         }
 
