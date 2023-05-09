@@ -2,6 +2,8 @@
 
 ## Custom Value Converter for Umbraco
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 A wrapper property-editor (for Umbraco) that lets you pick a custom/alternative `ValueConverter` for a specified data-type.
 
 
